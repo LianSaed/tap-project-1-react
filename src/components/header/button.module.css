@@ -1,0 +1,24 @@
+.featureButton {
+    font-weight: 400;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid var(--lines-color);
+    border-radius: 5px;
+    padding: 0px 10px 0px 10px;
+    line-height: 2;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--body-text);
+}
+
+.featureButton i {
+    color: var(--body-text);
+}
+
+@media screen and (max-width: 486px) {
+
+    .feature-button span {
+        display: none;
+    }
+
+}

@@ -1,0 +1,31 @@
+header {
+    background-color: var(--bg_default);
+}
+
+nav {
+    display: block;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.9%;
+    padding-left: var(--invisible-lines);
+    padding-right: var(--invisible-lines);
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-shrink: 3;
+    align-items: baseline;
+    align-content: center;
+    column-gap: 0.5%;
+}
+
+.homeButton {
+    margin-right: auto;
+    color: var(--brand-primary);
+    font-weight: Bold;
+    font-size: 22px;
+    line-height: 2;
+}

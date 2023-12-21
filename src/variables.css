@@ -1,0 +1,22 @@
+:root {
+  --font-family: 'Nunito Sans', sans-serif;
+  ;
+  --header-level-2: 36px;
+  --subtitle-font-size: 24px;
+  --brand-primary: #0768AC;
+  --brand-secondary: #03C180;
+  --bg_default: #FFFFFF;
+  --bg_body: #F0F9FF;
+  --lines-color: #DDDDDD;
+  --body-text: #333333;
+  --heart-color: #DC143C;
+  --details-text: #FFFFFF;
+  --details-bg: #333333;
+  --fixed-bg: #FFFFFF;
+  --favourite-option-text: #333333;
+  --favourite-option-lines: #DDDDDD;
+  --invisible-lines: 4%;
+  --border-radius: 6px;
+  --course-info-invisible-lines: 15px;
+  --stars-colors: #e5981e;
+}

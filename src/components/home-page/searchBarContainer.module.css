@@ -1,0 +1,41 @@
+.barContainer {
+    display: grid;
+    grid-template-columns: 0.3fr 5fr 1fr 1fr;
+    background-color: var(--bg_default);
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0px 0px 4px 2px var(--lines-color);
+}
+
+.barSize {
+    padding: 20px var(--invisible-lines);
+    height: 7.5vh;
+}
+
+.searchInput {
+    justify-self: stretch;
+}
+
+.searchbarInput {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border: 0px;
+    background-color: var(--bg_default);
+    border: none;
+    outline: none;
+    font-family: var(--font-family);
+    color: var(--body-text);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.searchIcon {
+    justify-self: center;
+    align-self: center;
+}
+
+input:-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+    /* Set the background color or other styles */
+}
