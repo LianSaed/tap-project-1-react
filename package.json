@@ -1,4 +1,5 @@
 {
+  "homepage": "http://LianSaed.github.io/tap-project-1-react/development",
   "name": "react-website",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +20,8 @@
   },
   "scripts": {
     "start": "concurrently \"webpack serve --mode development --open\" \"react-scripts start\"",
+    "predeploy": "npm run build",
+    "deply":"gh-pages -d build",
     "build": "webpack --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
