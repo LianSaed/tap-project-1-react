@@ -17,7 +17,7 @@
 
 @media screen and (max-width: 486px) {
 
-    .feature-button span {
+    .titleDisplay {
         display: none;
     }
 

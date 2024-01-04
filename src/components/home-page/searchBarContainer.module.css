@@ -39,3 +39,78 @@ input:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
     /* Set the background color or other styles */
 }
+
+.loader {
+    border: 16px solid var(--lines-color);
+    border-radius: 50%;
+    border-top: 13px solid var(--brand-primary);
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+    display: none;
+    margin-top: 50px;
+}
+
+.align-loader {
+    display: flex;
+    justify-content: center;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 486px) {
+
+    .searchbarInput {
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(2, 50px);
+    }
+
+    .searchIcon {
+        grid-column: 1 / span 1;
+        grid-row: 1 / 2;
+        border-bottom: 1px solid var(--lines-color);
+        display: grid;
+        place-items: center;
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+    }
+
+    .searchInput {
+        grid-column: 2 / span 10;
+        grid-row: 1 / 2;
+        border-top-right-radius: 15px;
+        border-bottom: 1px solid var(--lines-color);
+    }
+    
+    .barContainer {
+        height: auto;
+        padding-top: 10%;
+    }
+}
+
+@media screen and (max-width: 714px) and (min-width: 487px) {
+    .searchbarInput {
+        grid-template-columns: 0.7fr 6fr 1fr 1fr;
+    }
+}

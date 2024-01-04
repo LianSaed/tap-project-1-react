@@ -1,30 +1,22 @@
 import CourseCard from "./courseCard";
-import React, { useState, useEffect } from "react";
+import styles from "./courses.module.css";
 
 const Courses = (props) => {
-    const [courses, setCourses] = useState([]);
-
-    useEffect(() => {
-        fetch('https://tap-web-1.herokuapp.com/topics/list')
-            .then((response) => response.json())
-            .then((data) => setCourses(data))
-            .catch((error) => console.error("Error fetching courses:", error));
-    }, []);
-
     return (
-        <>
-            {courses.map((course, idx) => (
+        <div className={styles.mainGrid}>
+            {props.courses.map((course, idx) => (
                 <CourseCard
                     key={course.id}
                     id={course.id}
                     category={course.category}
                     topic={course.topic}
                     name={course.name}
+                    rating={course.rating}
                     idx={idx}
                     courseImage={course.image}
                 />
             ))}
-        </>
+        </div>
     );
 };
 

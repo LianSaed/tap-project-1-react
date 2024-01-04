@@ -1,22 +1,33 @@
 import styles from "./dropDownButton.module.css";
 
-const DropDownButton = () => (
+const DropDownButton = (props) => {
+    let btnClass = styles[props.btn];
+    const handelFilter = (value) => {
+        props.onFilter(value)
 
-return (<>
-    <div class="dropbtn btn1">
-        <div class="small-font-size">Sort by:</div>
-        <select class="dropdown" id="selection1">
-            <option value="0">
-                Default
-            </option>
-            <option value="1">
-                Topic Title
-            </option>
-            <option value="2">
-                Author Name
-            </option>
-        </select>
-    </div>
-</>)
-);
+    }
+    const handelSort = (value) => {
+        props.onSort(value)
+    }
+    return (
+        <>
+            <div className={`${styles.dropbtn} ${btnClass}`}>
+                <div className={styles.smallFontSize}>{props.type} By:</div>
+                <select className={styles.dropdown} id={props.id} onChange={(event) =>
+                    props.type === "Filter"
+                        ? handelFilter(event.target.value)
+                        : handelSort(event.target.value)
+                }>
+                    <option value="Default">
+                        Default
+                    </option>
+                    {props.options.map((value, id) => (
+                        <option value={value} key={id}>
+                            {value}
+                        </option>
+                    ))}
+                </select>
+            </div>
+        </>);
+};
 export default DropDownButton;

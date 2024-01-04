@@ -2,7 +2,6 @@ import React from "react";
 import Button from "./button";
 import Triangle from "./triangle";
 import WelcomeStatement from "./welcomeStatement";
-import '../../variables.css';
 import styles from "./header.module.css";
 
 

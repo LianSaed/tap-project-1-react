@@ -1,0 +1,11 @@
+.footerText {
+    text-align: center;
+}
+
+.heartColor{
+    color: var(--heart-color);
+}
+
+footer {
+    padding: 1%;
+}

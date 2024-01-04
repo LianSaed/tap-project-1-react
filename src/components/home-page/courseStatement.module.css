@@ -1,0 +1,12 @@
+
+.topicsCounterStatement {
+    padding-left: var(--invisible-lines);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.topicsCounterStatement,
+.statement {
+    margin: 0;
+    line-height: 1;
+}

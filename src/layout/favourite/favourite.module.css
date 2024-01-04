@@ -1,0 +1,68 @@
+.favouriteDisplay {
+    width: 100%;
+    border: 1px solid var(--bg_default);
+    background-color: var(--bg_default);
+    position: fixed;
+    bottom: 0;
+    height: 25%;
+    padding: 0 var(--invisible-lines) 0.1% var(--invisible-lines);
+    overflow: auto;
+}
+
+.favouriteDisplay p {
+    margin: 5px 0 5px 0;
+}
+
+.favouriteList {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    padding: 5px 0 5px 0;
+}
+
+.favouriteCard {
+    position: relative;
+    height: 15vh;
+    width: 95px;
+    border-radius: var(--border-radius);
+    background-color: var(--bg_default);
+    box-shadow: 0px 0px 3px 3px var(--lines-color);
+}
+
+.favouriteImg {
+    height: 55%;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.favouriteInfo {
+    font-weight: 400;
+    font-size: 5px;
+    padding-left: 5px;
+}
+
+.ratingStars {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.4rem;
+    color: var(--stars-colors);
+    padding-left: 5px;
+}
+
+@media screen and (max-width: 680px) {
+
+    .favouriteList {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+    }
+
+    .favouriteCard {
+        height: 10vh;
+        width: 35vw;
+    }
+
+}
